@@ -1,0 +1,19 @@
+:root { color-scheme: light dark; --bg: #f2f2f2; --text: #171717; --muted: #50565e; --accent: #005be6; --line: #d4d7dc; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.7 system-ui, sans-serif; letter-spacing: 0; }
+header, main, footer { width: min(100% - 40px, 780px); margin: auto; }
+header { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 28px 0; border-bottom: 1px solid var(--line); }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); font-size: 25px; font-weight: 750; }
+.brand img { width: 42px; height: 42px; }
+.brand span { color: var(--accent); }
+nav { display: flex; flex-wrap: wrap; gap: 16px; }
+a { color: var(--accent); overflow-wrap: anywhere; }
+a:focus-visible { outline: 3px solid #d4a017; outline-offset: 4px; }
+main { padding: 32px 0 48px; }
+h1 { font-size: 32px; line-height: 1.2; margin: 16px 0; }
+h2 { font-size: 21px; line-height: 1.35; margin: 36px 0 10px; }
+p { margin: 12px 0; }
+.meta { color: var(--muted); }
+footer { border-top: 1px solid var(--line); color: var(--muted); padding: 22px 0 40px; font-size: 14px; }
+@media (prefers-color-scheme: dark) { :root { --bg: #111111; --text: #f4f4f4; --muted: #b9bfc8; --accent: #408aff; --line: #353a42; } }
+@media (max-width: 440px) { header { align-items: flex-start; flex-direction: column; gap: 12px; } h1 { font-size: 28px; } }
